@@ -5,11 +5,11 @@ const app = require("../app");
 
 require("dotenv").config();
 
-MONGO_KEY="mongodb+srv://othmangourar:@-_-rajarca123@action.kqezcf6.mongodb.net/?retryWrites=true&w=majority&appName=Action"
+MONGO_KEY="mongodb+srv://othmangourar:gothr123@action.goorovn.mongodb.net/?retryWrites=true&w=majority&appName=Action"
 
 /* Connecting to the database before each test. */
 beforeEach(async () => {
-  await mongoose.connect(MONGO_KEY);
+  await mongoose.connect(process.env.MONGODB_URI);
 });
 
 /* Closing database connection after each test. */
