@@ -29,6 +29,7 @@ jobs:
         working-directory: ./client
         run: |
           npm install
+          npm run test
 
       # Install dependencies, export environment variables to be used by application and run tests for the server application
       - name: Install and Test Server
@@ -39,7 +40,6 @@ jobs:
           export TOKEN_KEY=$TOKEN_KEY
           export EMAIL=$EMAIL
           export PASSWORD=$PASSWORD
-          npm run test
 
       # Build a Docker image for the client application
       - name: Build Client Docker Image
