@@ -73,12 +73,12 @@ jobs:
       # Push the Docker images to Docker Hub
       - name: Push Docker Images to Docker Hub
         run: |
-          docker push rakeshpotnuru/productivity-app:client-${{github.run_number}}
-          docker push rakeshpotnuru/productivity-app:server-${{github.run_number}}
-          docker push rakeshpotnuru/productivity-app:nginx-${{github.run_number}}
-          docker push rakeshpotnuru/productivity-app:client-latest
-          docker push rakeshpotnuru/productivity-app:server-latest
-          docker push rakeshpotnuru/productivity-app:nginx-latest
+          docker push othman21/server:client-${{github.run_number}}
+          docker push othman21/server:server-${{github.run_number}}
+          docker push othman21/server-app:nginx-${{github.run_number}}
+          docker push othman21/server:client-latest
+          docker push othman21/server:server-latest
+          docker push othman21/server:nginx-latest
 
       # This is the step that is deploying the application to Elastic Beanstalk.
       - name: Deploy to Elastic Beanstalk
