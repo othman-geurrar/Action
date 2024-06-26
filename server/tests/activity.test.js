@@ -9,7 +9,7 @@ MONGO_KEY="mongodb+srv://othmangourar:gothr123@action.goorovn.mongodb.net/?retry
 
 /* Connecting to the database before each test. */
 beforeEach(async () => {
-  await mongoose.connect(process.env.MONGODB_URI);
+  await mongoose.connect(MONGO_KEY);
 });
 
 /* Closing database connection after each test. */
