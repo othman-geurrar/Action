@@ -5,17 +5,17 @@ const app = require("../app");
 
 require("dotenv").config();
 
-MONGO_KEY="mongodb+srv://othmangourar:gothr123@action.goorovn.mongodb.net/?retryWrites=true&w=majority&appName=Action"
+// MONGO_KEY="mongodb+srv://othmangourar:gothr123@action.goorovn.mongodb.net/?retryWrites=true&w=majority&appName=Action"
 
-/* Connecting to the database before each test. */
-beforeEach(async () => {
-  await mongoose.connect(MONGO_KEY);
-});
+// /* Connecting to the database before each test. */
+// beforeEach(async () => {
+//   await mongoose.connect(MONGO_KEY);
+// });
 
-/* Closing database connection after each test. */
-afterEach(async () => {
-  await mongoose.connection.close();
-});
+// /* Closing database connection after each test. */
+// afterEach(async () => {
+//   await mongoose.connection.close();
+// });
 
 // describe("GET /api/activities", () => {
 //   it("should get all the activities", async () => {
