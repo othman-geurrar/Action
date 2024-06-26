@@ -44,24 +44,24 @@ jobs:
       # Build a Docker image for the client application
       - name: Build Client Docker Image
         working-directory: ./client
-        # Build image with tag rakeshpotnuru/productivity-app:client
+        # Build image with tag othman21/action:client
         run: |
-          docker build -t rakeshpotnuru/productivity-app:client-${{github.run_number}} -t rakeshpotnuru/productivity-app:client-latest .
+          docker build -t othman21/action:client-${{github.run_number}} -t othman21/action:client-latest .
 
       # Build a Docker image for the server application
       - name: Build Server Docker Image
         working-directory:
           ./server
-          # Build image with tag rakeshpotnuru/productivity-app:server
+          # Build image with tag othman21/action:server
         run: |
-          docker build -t rakeshpotnuru/productivity-app:server-${{github.run_number}} -t rakeshpotnuru/productivity-app:server-latest .
+          docker build -t othman21/action:server-${{github.run_number}} -t othman21/action:server-latest .
 
       # Build a Docker image for the NGINX reverse proxy
       - name: Build NGINX Docker Image
         working-directory: ./nginx
-        # Build image with tag rakeshpotnuru/productivity-app:nginx
+        # Build image with tag othman21/action:nginx
         run: |
-          docker build -t rakeshpotnuru/productivity-app:nginx-${{github.run_number}} -t rakeshpotnuru/productivity-app:nginx-latest .
+          docker build -t othman21/action:nginx-${{github.run_number}} -t othman21/action:nginx-latest .
 
       # Log in to Docker Hub using credentials from repository secrets
       - name: Log in to Docker Hub
