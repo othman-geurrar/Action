@@ -23,9 +23,6 @@ jobs:
       # Checkout the code from the GitHub repository
       - name: Checkout code
         uses: actions/checkout@v3
-        uses: actions/setup-node@v2
-        with: 
-          node-version: 18
 
       # Install dependencies and run tests for the client application
       - name: Install and Test Client
